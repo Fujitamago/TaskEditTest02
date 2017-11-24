@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="project_arr">
+        <item></item>
+        <item>Project TriForce.</item>
+        <item>Project1</item>
+        <item>Project2</item>
+    </string-array>
+</resources>
