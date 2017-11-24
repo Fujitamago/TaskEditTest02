@@ -22,4 +22,6 @@ public class Project extends RealmObject {
 
     public void setAddress(String address) { this.address = address; }
 
+
+
 }
