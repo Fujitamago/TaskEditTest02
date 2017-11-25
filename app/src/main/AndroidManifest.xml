@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DatePickerT"></activity>
+        <activity android:name=".MyListFragment"></activity>
 
     </application>
 
