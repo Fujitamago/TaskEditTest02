@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.facebook.stetho.Stetho;
@@ -34,24 +35,18 @@ public class MainActivity extends AppCompatActivity {
 
         // このスレッドのためのRealmインスタンスを取得
         realm = Realm.getDefaultInstance();
-        /*
-
-        try {
-            // ... Realmを使用した処理 ...
-            realm.beginTransaction();
-            realm.executeTransaction(new Realm.Transaction() {
-                @Override
-                public void execute(Realm realm) {
-                    Project projects = realm.createObject(Project.class);
-                    projects.setName("Fido");
-                }
-            });
-            realm.commitTransaction();
-        } finally {
-            realm.close();
-        }
-        */
         setContentView(R.layout.activity_main);
+
+        Button btnShowDialog = (Button) findViewById(R.id.btnShowDialog);
+        btnShowDialog.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MyListFragment.class);
+                startActivity(intent);
+            }
+        });
+
     }
             //着手日をタップした時
     public void DateTapped(View view) {
