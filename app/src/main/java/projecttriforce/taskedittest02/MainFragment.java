@@ -1,9 +1,11 @@
 package projecttriforce.taskedittest02;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,13 @@ import java.util.ArrayList;
 
 public class MainFragment extends Fragment {
     public MainFragment() {
+    }
+    private static final String TAG  = "MainFragment";
+
+    @Override
+    public void onAttach(Activity activity){
+        Log.d(TAG, "call onAttach().");
+        super.onAttach(activity);
     }
 
     @Override
@@ -43,16 +52,15 @@ public class MainFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-
                 // 詳細画面へ値を渡す
-                DetailFragment fragment = new DetailFragment();
+                DetailFragment detailFragment = new DetailFragment();
                 Bundle bundle = new Bundle();
                 bundle.putInt("selected",position);
-                fragment.setArguments(bundle);
+                detailFragment.setArguments(bundle);
                 // 詳細画面を呼び出す
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.main_fragment, fragment);
+                transaction.replace(R.id.main_fragment, detailFragment);
                 // 戻るボタンで戻ってこれるように
                 transaction.addToBackStack(null);
                 transaction.commit();
