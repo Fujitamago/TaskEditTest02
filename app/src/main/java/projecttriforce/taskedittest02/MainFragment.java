@@ -43,6 +43,7 @@ public class MainFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+
                 // 詳細画面へ値を渡す
                 DetailFragment fragment = new DetailFragment();
                 Bundle bundle = new Bundle();
@@ -55,6 +56,7 @@ public class MainFragment extends Fragment {
                 // 戻るボタンで戻ってこれるように
                 transaction.addToBackStack(null);
                 transaction.commit();
+
             }
         });
     }

@@ -1,12 +1,11 @@
 package projecttriforce.taskedittest02;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
-import android.content.Intent;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class DatePickerT extends AppCompatActivity  {
 
@@ -29,7 +28,7 @@ public class DatePickerT extends AppCompatActivity  {
     }
     public void DateOK(View view){
         TextView txt = (TextView)findViewById(R.id.Datetemp);
-        Intent intent = new Intent(this, projecttriforce.taskedittest02.MainActivity.class);
+        Intent intent = new Intent(this, projecttriforce.taskedittest02.SubActivity.class);
         String str = txt.getText().toString();
         intent.putExtra("DateOK",str);
         startActivity(intent);

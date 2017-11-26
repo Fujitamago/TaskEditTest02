@@ -35,14 +35,14 @@ public class SubActivity extends AppCompatActivity {
 
         // このスレッドのためのRealmインスタンスを取得
         realm = Realm.getDefaultInstance();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sub);
 
         Button btnShowDialog = (Button) findViewById(R.id.btnShowDialog);
         btnShowDialog.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MyListFragment.class);
+                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
                 startActivity(intent);
             }
         });
