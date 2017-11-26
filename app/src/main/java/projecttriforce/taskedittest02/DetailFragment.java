@@ -41,7 +41,6 @@ public class DetailFragment extends Fragment{
             }
         });
 
-
         // クリックした時の処理を書きます
         view.findViewById(R.id.DeadDate).setOnClickListener(new View.OnClickListener() {
             @Override
