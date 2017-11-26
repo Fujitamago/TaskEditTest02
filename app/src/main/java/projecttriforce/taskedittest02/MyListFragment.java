@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 public class MyListFragment extends FragmentActivity {
 
