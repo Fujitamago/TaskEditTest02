@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
             //着手日をタップした時
     public void DateTapped(View view) {

@@ -1,16 +1,18 @@
 package projecttriforce.taskedittest02;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class MyListFragment extends AppCompatActivity {
+public class MyListFragment extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
 
@@ -26,5 +28,15 @@ public class MyListFragment extends AppCompatActivity {
         FragmentTransaction tx = manager.beginTransaction();
         tx.add(R.id.fragment_color, colorFragment, "fragment_color");
         tx.commit();
+
+
+
+
     }
+
+
+
+
+
+
 }
